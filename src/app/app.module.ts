@@ -3,20 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContaComponent } from './components/views/cadastrar/conta/conta.component';
-import { ContentComponent } from './components/template/content/content/content.component';
 import { HeaderComponent } from './components/template/header/header.component';
+import { ListarContaComponent } from './components/views/conta/listar-conta/listar-conta.component';
+import { CadastrarContaComponent } from './components/views/conta/cadastrar-conta/cadastrar-conta.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContaComponent,
-    ContentComponent,
-    HeaderComponent
+    HeaderComponent,
+    ListarContaComponent,
+    CadastrarContaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
