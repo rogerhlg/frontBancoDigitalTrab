@@ -1,10 +1,11 @@
 import { Pix } from "./Pix";
 
 export class Conta {
-    nome!: string;
+    primeiroNome!: string;
     sobrenome!: string;
-    cpf!: string;
+    CPF!: string;
     telefone?: string;
     saldo?: number;
     pix!: Pix;
+    criadoEm?: Date;
 }
