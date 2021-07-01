@@ -1,1 +1,41 @@
-<p>cadastrar-conta works!</p>
+<mat-card>
+    <mat-card-title> Nova Conta Digital </mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label for="data">Nome do usuário</mat-label>
+            <input matInput placeholder="Nome" type="string" name="data" [(ngModel)]="nome" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label for="data">Sobrenome</mat-label>
+            <input matInput placeholder="Sobrenome" type="string" name="sobre" [(ngModel)]="sobrenome" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label for="data">CPF</mat-label>
+            <input matInput placeholder="CPF" type="string" name="data" [(ngModel)]="cpf" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label for="data">Telefone</mat-label>
+            <input matInput placeholder="Telefone" type="string" name="data" [(ngModel)]="telefone" />
+        </mat-form-field>
+        <mat-card>
+            <mat-card-title> PIX </mat-card-title>
+            <mat-card-content>
+                <mat-form-field>
+                    <mat-label for="data">Chave do pix</mat-label>
+                    <input matInput placeholder="Chave" type="string" name="data" [(ngModel)]="chave" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label for="data">Tipo de chave</mat-label>
+                    <input matInput placeholder="Tipo" type="string" name="data" [(ngModel)]="tipo" />
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+        <mat-card-actions>
+            <button mat-raised-button color="warn" (click)="cadastrar()">Cadastrar</button>
+            <a mat-stroked-button routerLink=""> Listar Contas </a>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>
