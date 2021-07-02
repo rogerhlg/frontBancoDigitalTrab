@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Conta } from "../models/Conta";
+import { Saque } from "../models/Saque";
 
 @Injectable({
   providedIn: "root",
@@ -26,6 +27,10 @@ export class ContaService {
 
   atualizar(conta: Conta, cpf: String): Observable<Conta> {
     return this.http.put<Conta>(`${this.baseURL}conta/atualizar/${cpf}`, conta);
+  }
+
+  saque(saque: Saque, pix: String): Observable<void> {
+    return this.http.post<void>(`${this.baseURL}conta/saque/${pix}`, saque);
   }
 }
 // DELETE http://localhost:3000/conta/deletar/123123

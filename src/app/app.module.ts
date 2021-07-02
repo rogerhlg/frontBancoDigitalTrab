@@ -23,6 +23,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { DeletarComponent } from './components/views/conta/deletar/deletar.component';
 import { AtualizarComponent } from './components/views/conta/atualizar/atualizar.component';
+import { SaqueComponent } from './components/views/saque/saque.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AtualizarComponent } from './components/views/conta/atualizar/atualizar
     CadastrarContaComponent,
     ContentComponent,
     DeletarComponent,
-    AtualizarComponent
+    AtualizarComponent,
+    SaqueComponent
   ],
   imports: [
     BrowserModule,

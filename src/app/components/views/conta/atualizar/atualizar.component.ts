@@ -44,7 +44,7 @@ export class AtualizarComponent implements OnInit {
     conta.PIX = this.pix;
     conta.telefone = this.telefone;
     console.log(conta);
-    this.service.atualizar(conta, this.alvo).subscribe(conta => {
+    this.service.atualizar(conta, this.alvo).subscribe( () => {
       console.log(conta);
       this.snack.open("Conta atualizada!", "", {
         duration: 3000,
