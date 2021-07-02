@@ -25,6 +25,7 @@ import { DeletarComponent } from './components/views/conta/deletar/deletar.compo
 import { AtualizarComponent } from './components/views/conta/atualizar/atualizar.component';
 import { SaqueComponent } from './components/views/saque/saque.component';
 import { DepositoComponent } from './components/views/deposito/deposito.component';
+import { TransferenciaComponent } from './components/views/transferencia/transferencia.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DepositoComponent } from './components/views/deposito/deposito.componen
     DeletarComponent,
     AtualizarComponent,
     SaqueComponent,
-    DepositoComponent
+    DepositoComponent,
+    TransferenciaComponent
   ],
   imports: [
     BrowserModule,

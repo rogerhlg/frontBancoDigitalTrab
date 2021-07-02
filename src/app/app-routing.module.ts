@@ -6,6 +6,7 @@ import { DeletarComponent } from './components/views/conta/deletar/deletar.compo
 import { ListarContaComponent } from './components/views/conta/listar-conta/listar-conta.component';
 import { DepositoComponent } from './components/views/deposito/deposito.component';
 import { SaqueComponent } from './components/views/saque/saque.component';
+import { TransferenciaComponent } from './components/views/transferencia/transferencia.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'deposito/conta',
     component: DepositoComponent
+  },
+  {
+    path: 'transferencia/conta',
+    component: TransferenciaComponent
   }
 ];
 

@@ -4,6 +4,8 @@ import { Observable } from "rxjs";
 import { Conta } from "../models/Conta";
 import { Deposito } from "../models/Deposito";
 import { Saque } from "../models/Saque";
+import { Transferencia } from "../models/Transferencia";
+
 
 @Injectable({
   providedIn: "root",
@@ -37,5 +39,9 @@ export class ContaService {
   deposito(deposito: Deposito, pix: String): Observable<void> {
     return this.http.post<void>(`${this.baseURL}conta/deposito/${pix}`, deposito);
   }
-  
+
+  transferencia(transferencia: Transferencia, pix: String): Observable<void> {
+    return this.http.post<void>(`${this.baseURL}conta/transferencia/${pix}`, transferencia);
+  }
+
 }
