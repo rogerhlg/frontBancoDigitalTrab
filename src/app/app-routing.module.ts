@@ -4,6 +4,7 @@ import { AtualizarComponent } from './components/views/conta/atualizar/atualizar
 import { CadastrarContaComponent } from './components/views/conta/cadastrar-conta/cadastrar-conta.component';
 import { DeletarComponent } from './components/views/conta/deletar/deletar.component';
 import { ListarContaComponent } from './components/views/conta/listar-conta/listar-conta.component';
+import { DepositoComponent } from './components/views/deposito/deposito.component';
 import { SaqueComponent } from './components/views/saque/saque.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'saque/conta',
     component: SaqueComponent
+  },
+  {
+    path: 'deposito/conta',
+    component: DepositoComponent
   }
 ];
 

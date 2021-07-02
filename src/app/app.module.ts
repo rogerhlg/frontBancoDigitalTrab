@@ -24,6 +24,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { DeletarComponent } from './components/views/conta/deletar/deletar.component';
 import { AtualizarComponent } from './components/views/conta/atualizar/atualizar.component';
 import { SaqueComponent } from './components/views/saque/saque.component';
+import { DepositoComponent } from './components/views/deposito/deposito.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SaqueComponent } from './components/views/saque/saque.component';
     ContentComponent,
     DeletarComponent,
     AtualizarComponent,
-    SaqueComponent
+    SaqueComponent,
+    DepositoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title> Deposito: </mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label for="data">Valor</mat-label>
+            <input matInput placeholder="Valor" type="number" name="data" [(ngModel)]="valor" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="data">Pix</mat-label>
+            <input matInput placeholder="PIX" type="string" name="data" [(ngModel)]="pix" />
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button color="warn" (click)="efetuar()">Depositar</button>
+            <a mat-stroked-button routerLink=""> Listar Contas </a>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>    
