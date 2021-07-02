@@ -19,4 +19,13 @@ export class ContaService {
   cadastrar(conta: Conta): Observable<Conta> {
     return this.http.post<Conta>(`${this.baseURL}conta/cadastrar/`, conta);
   }
+
+  remover(cpf: String): Observable<void> {
+    return this.http.delete<void>(`${this.baseURL}conta/deletar/${cpf}`);
+  }
+
+  atualizar(conta: Conta, cpf: String): Observable<Conta> {
+    return this.http.put<Conta>(`${this.baseURL}conta/atualizar/${cpf}`, conta);
+  }
 }
+// DELETE http://localhost:3000/conta/deletar/123123

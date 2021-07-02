@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title> Deletar conta, Insira o CPF da conta a ser deletada: </mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label for="data">CPF</mat-label>
+            <input matInput placeholder="Nome" type="string" name="data" [(ngModel)]="cpf" />
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button color="warn" (click)="deletar()">Cadastrar</button>
+            <a mat-stroked-button routerLink=""> Listar Contas </a>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>    

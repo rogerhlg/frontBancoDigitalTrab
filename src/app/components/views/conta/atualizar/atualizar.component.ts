@@ -6,29 +6,32 @@ import { Pix } from 'src/app/models/Pix';
 import { ContaService } from 'src/app/services/conta.service';
 
 @Component({
-  selector: 'app-cadastrar-conta',
-  templateUrl: './cadastrar-conta.component.html',
-  styleUrls: ['./cadastrar-conta.component.css']
+  selector: 'app-atualizar',
+  templateUrl: './atualizar.component.html',
+  styleUrls: ['./atualizar.component.css']
 })
-export class CadastrarContaComponent implements OnInit {
+export class AtualizarComponent implements OnInit {
 
+  alvo!: string;
   data!: string;
   tipo!: string;
   chave!: string;
 
   cpf!: string;
-  pix!: string;
+  // pix!: Pix;
   sobrenome!: string;
   nome!: string;
   saldo!: number;
   telefone!: string;
+  pix!: string;
 
+  
   constructor(private service: ContaService, private router: Router, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
   }
 
-  cadastrar(): void {
+  atualizar(): void {
 
     // let pix = new Pix();
     // pix.tipo = this.tipo;
@@ -41,9 +44,9 @@ export class CadastrarContaComponent implements OnInit {
     conta.PIX = this.pix;
     conta.telefone = this.telefone;
     console.log(conta);
-    this.service.cadastrar(conta).subscribe(conta => {
+    this.service.atualizar(conta, this.alvo).subscribe(conta => {
       console.log(conta);
-      this.snack.open("Conta digital cadastrada", "", {
+      this.snack.open("Conta atualizada!", "", {
         duration: 3000,
         horizontalPosition: "right",
         verticalPosition: "top",

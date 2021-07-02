@@ -6,6 +6,6 @@ export class Conta {
     CPF!: string;
     telefone?: string;
     saldo?: number;
-    pix!: Pix;
+    PIX!: string;
     criadoEm?: Date;
 }
